@@ -1,4 +1,4 @@
-# A Lightweight AI-Based CNN Model for Real-Time Object Classification Using UAV Videos (Zero-Cost Implementation)
+# A Lightweight CNN Model for Real-Time Object Classification
 
 ## 📌 Project Overview
 This project implementation features a lightweight Convolutional Neural Network (CNN) specifically optimized for real-time object classification from UAV (drone) video streams. By utilizing **Depthwise Separable Convolutions**, we've achieved a model with fewer than **2 million parameters**, making it ideal for deployment on low-power embedded systems typical of modern UAVs.
