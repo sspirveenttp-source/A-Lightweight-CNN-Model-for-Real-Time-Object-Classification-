@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAV AI Classify | Real-Time Object Classification</title>
+    <meta name="description" content="A Lightweight AI-Based CNN Model for Real-Time Object Classification Using UAV Videos (Zero-Cost Implementation)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- TensorFlow.js and COCO-SSD for real-time demo -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav>
+        <div class="logo">UAV<span>AI</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#abstract">Abstract</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#demo">Live Demo</a></li>
+        </ul>
+        <button class="btn-primary" id="login-nav">PIRVEEN S S</button>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <span class="badge">Zero-Cost Implementation</span>
+            <h1>A Lightweight AI-Based CNN Model for <span>Real-Time Object Classification</span> Using UAV Videos</h1>
+            <p>Empowering low-cost drones with deep learning capabilities using depthwise separable convolutions and open-source datasets.</p>
+            <div class="hero-btns">
+                <a href="#demo" class="btn-glow">Launch Live Demo</a>
+                <a href="#abstract" class="btn-outline">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="uav-container">
+                <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=1000" alt="UAV Drone" id="hero-img">
+                <div class="scanning-line"></div>
+                <div class="detection-box" style="top: 20%; left: 30%; width: 100px; height: 100px;">
+                    <span class="label">Person: 98%</span>
+                </div>
+                <div class="detection-box" style="top: 50%; left: 60%; width: 150px; height: 120px;">
+                    <span class="label">Vehicle: 94%</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="abstract" class="section-glass">
+        <div class="section-title">
+            <h2>Project Overview</h2>
+            <div class="title-line"></div>
+        </div>
+        <div class="abstract-grid">
+            <div class="abstract-text">
+                <h3>Abstract</h3>
+                <p>There has been a significant rise in the use of autonomous unmanned aerial vehicles (UAVs) for surveillance, agriculture, traffic analysis, and public safety. Real-time object classification from UAV video is an essential capability for building intelligent and automated monitoring systems. However, many deep-learning models used today are large, slow, and require expensive hardware, making them unsuitable for real-time deployment on low-cost UAVs.</p>
+                <p>To overcome this problem, this project proposes a lightweight and completely free AI-based CNN model using depthwise separable convolutions for fast and accurate object classification from UAV video streams. The proposed CNN architecture contains fewer than 2 million parameters, making it highly efficient for embedded devices.</p>
+            </div>
+            <div class="features-list">
+                <div class="feature-card">
+                    <div class="icon">🚀</div>
+                    <h4>Real-Time Performance</h4>
+                    <p>Achieves 20-30 FPS on low-end hardware.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💰</div>
+                    <h4>Zero-Cost</h4>
+                    <p>Uses only free tools like Colab, Python, and COCO.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🤏</div>
+                    <h4>Lightweight</h4>
+                    <p>Small footprint (< 2M parameters) for UAV deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture">
+        <div class="section-title">
+            <h2>System Architecture</h2>
+            <p>Optimized for Speed and Accuracy</p>
+        </div>
+        <div class="arch-flow">
+            <div class="flow-step">
+                <div class="step-num">1</div>
+                <h4>Dataset</h4>
+                <p>VisDrone / UAVDT / COCO</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+                <div class="step-num">2</div>
+                <h4>Preprocessing</h4>
+                <p>Resize (224x224) & Normalize</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+                <div class="step-num">3</div>
+                <h4>CNN Model</h4>
+                <p>Depthwise Separable Conv</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+                <div class="step-num">4</div>
+                <h4>Output</h4>
+                <p>Real-Time Classification</p>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h3>Technologies Used</h3>
+            <div class="tech-icons">
+                <div class="tech-tag">Python</div>
+                <div class="tech-tag">TensorFlow</div>
+                <div class="tech-tag">OpenCV</div>
+                <div class="tech-tag">Google Colab</div>
+                <div class="tech-tag">MobileNetV2</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="demo-section">
+        <div class="section-title">
+            <h2>Live Classification Demo</h2>
+            <p>Experience the real-time AI classification in your browser</p>
+        </div>
+        
+        <div class="demo-container">
+            <div class="video-wrapper">
+                <video id="webcam" autoplay muted playsinline></video>
+                <canvas id="canvas"></canvas>
+                <div id="loader" class="loader">
+                    <div class="spinner"></div>
+                    <p>Loading AI Model...</p>
+                </div>
+            </div>
+            <div class="demo-controls">
+                <button id="start-btn" class="btn-glow">Enable Camera</button>
+                <button id="stop-btn" class="btn-outline" disabled>Stop</button>
+                <div class="status-panel">
+                    <div class="status-item">
+                        <span>Model Status:</span>
+                        <span id="model-status" class="status-badge loading">Loading...</span>
+                    </div>
+                    <div class="status-item">
+                        <span>Objects Detected:</span>
+                        <span id="object-count">0</span>
+                    </div>
+                    <div class="results-box" id="results">
+                        <p class="placeholder">Awaiting live feed...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>UAV AI CLASSIFIER</h3>
+                <p>A final year project by PIRVEEN S S</p>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 PIRVEEN S S. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
